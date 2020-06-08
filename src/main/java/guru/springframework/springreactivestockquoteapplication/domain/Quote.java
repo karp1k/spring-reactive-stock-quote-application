@@ -11,7 +11,7 @@ import java.time.Instant;
  * @author kas
  */
 @Data
-@Document
+@Document(collection = "quote")
 public class Quote {
 
     @Id
