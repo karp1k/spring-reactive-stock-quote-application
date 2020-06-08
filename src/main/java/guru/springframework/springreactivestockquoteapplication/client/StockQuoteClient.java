@@ -36,7 +36,7 @@ public class StockQuoteClient {
         log.info("Url is {}", url);
     }
 
-    Flux<Quote> getQuoteStream() {
+    public Flux<Quote> getQuoteStream() {
         return WebClient.builder()
                 .baseUrl(url)
                 .build()
