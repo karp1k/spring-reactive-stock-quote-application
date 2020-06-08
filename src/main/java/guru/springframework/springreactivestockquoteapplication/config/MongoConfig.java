@@ -18,6 +18,7 @@ public class MongoConfig {
 
     @PostConstruct
     void init() {
+        // create caped document for tailable cursor
         CollectionOptions options = CollectionOptions.empty().capped().size(100000).maxDocuments(1000);
         reactiveMongoOperations.createCollection("quote", options).subscribe();
     }
